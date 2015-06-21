@@ -73,9 +73,9 @@ else
   <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu active"> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
-        <li class="active"><a href="basic.php">basic</a></li>
+        <li><a href="basic.php">basic</a></li>
         <li><a href="penetration.php">penetration</a></li>
-        <li><a href="reverse.php">reverse</a></li>
+        <li class="active"><a href="reverse.php">reverse</a></li>
         <li><a href="pwn.php">pwn</a></li>
         <li><a href="mis.php">mis</a></li>
       </ul>
@@ -101,16 +101,16 @@ else
 
 <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-hand-right"></i> </span>
-            <h5>Basic</h5>
+            <h5>Reverse</h5>
           </div>
 
           <div class="widget-content"> 
-            <a href="#BASIC10" id="BtBASIC10" data-toggle="modal" class="btn btn-success">BASIC10</a> 
-            <a href="#BASIC20" id="BtBASIC20" data-toggle="modal" class="btn btn-success">BASIC20</a>
-            <a href="#BASIC30" id="BtBASIC30" data-toggle="modal" class="btn btn-success">BASIC30</a>
-            <a href="#BASIC40" id="BtBASIC40" data-toggle="modal" class="btn btn-success">BASIC40</a>
+            <a href="#REVERSE10" id="BtREVERSE10" data-toggle="modal" class="btn btn-success">REVERSE10</a> 
+            <a href="#REVERSE20" id="BtREVERSE20" data-toggle="modal" class="btn btn-success">REVERSE20</a>
+            <a href="#REVERSE30" id="BtREVERSE30" data-toggle="modal" class="btn btn-success">REVERSE30</a>
+            <a href="#REVERSE40" id="BtREVERSE40" data-toggle="modal" class="btn btn-success">REVERSE40</a>
             
-            <div id="BASIC10" class="modal hide">
+            <div id="REVERSE10" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -120,16 +120,16 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form  class="form-horizontal" action="" method="post">
-                      <b>key:</b> <input type="text"  name="BASIC10" placeholder="input your key">
+                      <b>key:</b> <input type="text"  name="REVERSE10" placeholder="input your key">
                       <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                           
                       </form>
 
                 </p>
               </div>
-            </div>
-          
-          <div id="BASIC20" class="modal hide">
+            
+          </div>
+          <div id="REVERSE20" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -139,25 +139,7 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC20" placeholder="input your key">
-                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
-                      </form>
-
-                </p>
-              </div>
-            </div>
-          
-          <div id="BASIC30" class="modal hide">
-              <div class="modal-header">
-                <button data-dismiss="modal" class="close" type="button">×</button>
-                <h3>Pop up Header</h3>
-              </div>
-              <div class="modal-body">
-                <p>
-
-                      who is the greastest hacker?<br><br><br>
-                      <form  class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC30" placeholder="input your key">
+                      <b>key:</b> <input type="text" name="REVERSE20" placeholder="input your key">
                            <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                       </form>
 
@@ -165,7 +147,7 @@ else
               </div>
             
           </div>
-          <div id="BASIC40" class="modal hide">
+          <div id="REVERSE30" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -175,7 +157,25 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form  class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC40" placeholder="input your key">
+                      <b>key:</b> <input type="text" name="REVERSE30" placeholder="input your key">
+                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
+                      </form>
+
+                </p>
+              </div>
+           
+          </div>
+          <div id="REVERSE40" class="modal hide">
+              <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h3>Pop up Header</h3>
+              </div>
+              <div class="modal-body">
+                <p>
+
+                      who is the greastest hacker?<br><br><br>
+                      <form  class="form-horizontal" action="#" method="post">
+                      <b>key:</b> <input type="text" name="REVERSE40" placeholder="input your key">
                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                       </form>
 
@@ -183,8 +183,7 @@ else
               </div>
             </div>
           </div>
-
-        </div>
+</div>
 
   </div>
 </div>

@@ -8,7 +8,7 @@ else
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ctf2015</title>
+<title>CTF-2015</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -29,18 +29,8 @@ else
 <!--top-Header-menu-->
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
-        <li class="divider"></li>
-        <li><a href="login.php"><i class="icon-key"></i> Log Out</a></li>
-      </ul>
-    </li>
- 
-    
-    <li class=""><a title="" href="login.php"><i class="icon icon-share-alt"></i> <span class="text">sign in</span></a></li>
+    <li class=""><a title="" href="register.php"><i class="icon icon-user"></i> <span class="text">Sign up</span></a></li>
+    <li class=""><a title="" href="login.php"><i class="icon icon-user"></i> <span class="text">Sign in</span></a></li>
   </ul>
 </div>
 
@@ -50,17 +40,18 @@ else
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
   <ul>
   <li class="active"><a href="index.php"> <span>CTF-2015</span></a> </li>
-  <li><a href="index.php"> <span>RULES</span></a> </li>
+  <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu "> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
-        <li><a href="index2.php">penetration</a></li>
-        <li><a href="gallery.php">reverse</a></li>
-        <li><a href="calendar.php">pwn</a></li>
-        <li><a href="invoice.php">mis</a></li>
+        <li><a href="basic.php">basic</a></li>
+        <li><a href="penetration.php">penetration</a></li>
+        <li><a href="reverse.php">reverse</a></li>
+        <li><a href="pwn.php">pwn</a></li>
+        <li><a href="mis.php">mis</a></li>
       </ul>
-  <li><a href="index.php"> <span>RANK</span></a> </li>
-  <li><a href="index.php"> <span>NOTICE</span></a> </li>
-  <li><a href="index.php"> <span>STUDY-GUIDE</span></a> </li>
+  <li><a href="rank.php"> <span>RANK</span></a> </li>
+  <li><a href="notice.php"> <span>NOTICE</span></a> </li>
+  <li><a href="study-guide.php"> <span>STUDY-GUIDE</span></a> </li>
 </li>
 
   </ul>

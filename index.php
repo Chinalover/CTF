@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ctf 2015</title>
+<title>CTF-2015</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -31,11 +31,11 @@
     </span>
     <b class="caret"></b></a>
       <ul class="dropdown-menu">
-        <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+        <li><a href="user.php"><i class="icon-user"></i> My Profile</a></li>
         <li class="divider"></li>
-        <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+        <li><a href="challenge.php"><i class="icon-check"></i> My Tasks</a></li>
         <li class="divider"></li>
-        <li><a href="logout.html"><i class="icon-key"></i> Log Out</a></li>
+        <li><a href="logout.php"><i class="icon-key"></i> Log Out</a></li>
       </ul>
     </li>
     <li class=""><a title="" href="logout.php"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
@@ -48,19 +48,9 @@ else
 ?>
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  
-    <span class="text"> Welcome
-    </span>
-    <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li><a href="user.php"><i class="icon-user"></i> My Profile</a></li>
-        <li class="divider"></li>
-        <li><a href="challenge.php"><i class="icon-check"></i> My Tasks</a></li>
-        <li class="divider"></li>
-        <li><a href="logout.php"><i class="icon-key"></i> Log Out</a></li>
-      </ul>
-    </li>
-    <li class=""><a title="" href="login.php"><i class="icon icon-share-alt"></i> <span class="text">Sign in</span></a></li>
+     
+    <li class=""><a title="" href="register.php"><i class="icon icon-user"></i> <span class="text">Sign up</span></a>
+    <li class=""><a title="" href="login.php"><i class="con icon-user"></i> <span class="text">Sign in</span></a></li>
   </ul>
 </div>
 <? } ?>
@@ -92,8 +82,7 @@ else
 <div id="content">
   <div id="content-header">
     <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> <a href="#">CTF-2015</a> <a href="#" class="current">INFO</a> </div>
-    <h1>welcome to 2015 fzu ctf<br>
-    chanllenge for fun !
+    <h1>WELCOME TO CTF-2015,HAVE A GOOD HACKING TIME!<br>
      </h1>
 
 

@@ -59,8 +59,8 @@ else
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
   <ul>
-  <li ><a href="index.php"> <span>CTF-2015</span></a> </li>
-  <li class="active"><a href="rules.php"> <span>RULES</span></a> </li>
+  <li><a href="index.php"> <span>CTF-2015</span></a> </li>
+  <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu "> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
         <li><a href="basic.php">basic</a></li>
@@ -70,7 +70,7 @@ else
         <li><a href="mis.php">mis</a></li>
       </ul>
   <li><a href="rank.php"> <span>RANK</span></a> </li>
-  <li><a href="notice.php"> <span>NOTICE</span></a> </li>
+  <li class="active"><a href="notice.php"> <span>NOTICE</span></a> </li>
   <li><a href="study-guide.php"> <span>STUDY-GUIDE</span></a> </li>
 </li>
 
@@ -81,8 +81,8 @@ else
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> <a href="#">CTF-2015</a> <a href="#" class="current">RULES</a> </div>
-    <h1>CTF RULES</h1>
+    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> <a href="#">CTF-2015</a> <a href="#" class="current">NOTICE</a> </div>
+    <h1>NOTICE</h1>
 </div>
 
 <div class="container-fluid"><hr>
@@ -91,17 +91,12 @@ else
 
           <div class="widget-box">
               <div class="widget-title"> <span class="icon"> <i class="icon-hand-right"></i> </span>
-                <h5>rules</h5>
+                <h5>Notice</h5>
               </div>
               
  <div class="widget-content">
  <div class="myfont">               
-1、It is not allowed for teams with independent accounts to cooperate or discuss about the contest problems.<br>
-2、It is not allowed to attack the competition infrastructure. If flaws in the infrastructure are found, please report to us.<br>
-3、The registration units is team. Domestic player can login in with XCTF account.<br>
-4、For placing teams to receive prizes, they must submit a full writeup of each challenge explaining how it was solved.<br>
-5、Teams breaking rules may be penalized or excluded from the competition.<br>
-6、The final interpretation right of this event is reserved by the commitee.<br>
+notice !
 </div>
     </div>
             

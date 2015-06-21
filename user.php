@@ -59,8 +59,8 @@ else
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
   <ul>
-  <li ><a href="index.php"> <span>CTF-2015</span></a> </li>
-  <li class="active"><a href="rules.php"> <span>RULES</span></a> </li>
+  <li><a href="index.php"> <span>CTF-2015</span></a> </li>
+  <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu "> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
         <li><a href="basic.php">basic</a></li>
@@ -81,37 +81,66 @@ else
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> <a href="#">CTF-2015</a> <a href="#" class="current">RULES</a> </div>
-    <h1>CTF RULES</h1>
-</div>
+    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> <a href="#">CTF-2015</a> <a href="#" class="current">MYINFO</a> </div>
+    <h1><b>我的战绩</b>
+     </h1>
+
 
 <div class="container-fluid"><hr>
     <div class="row-fluid">
       <div class="span12">
 
-          <div class="widget-box">
-              <div class="widget-title"> <span class="icon"> <i class="icon-hand-right"></i> </span>
-                <h5>rules</h5>
-              </div>
-              
- <div class="widget-content">
- <div class="myfont">               
-1、It is not allowed for teams with independent accounts to cooperate or discuss about the contest problems.<br>
-2、It is not allowed to attack the competition infrastructure. If flaws in the infrastructure are found, please report to us.<br>
-3、The registration units is team. Domestic player can login in with XCTF account.<br>
-4、For placing teams to receive prizes, they must submit a full writeup of each challenge explaining how it was solved.<br>
-5、Teams breaking rules may be penalized or excluded from the competition.<br>
-6、The final interpretation right of this event is reserved by the commitee.<br>
-</div>
-    </div>
-            
+      <div class="widget-box">
+          <div class="widget-title"><span class="icon"> <i class="icon-ok-sign"></i> </span>
+            <h5>MYINFOMATION</h5>
           </div>
-      </div>
+          <div class="widget-content">
+            
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Score</th>
+                  <th>Rank</th>
+                  <th>LastAnswerTime</th>
+                </tr>
+              </thead>
+              <tbody>
+              <?
+              require_once 'dbconn.php';
+              $user=$_COOKIE['user'];
+              $sql="select * from ctf_user where user='$user' ;";
+              $sql2="select  count( distinct a1.UserScore)+1 rank from ctf_user a1,ctf_user a2 where a2.UserScore in (select UserScore from ctf_user where user='$user') and (a1.UserScore>a2.UserScore or (a1.UserScore=a2.UserScore and a1.LastAnswerTime<a2.LastAnswerTime)) and a1.user<>'$user'";
+              $result=mysql_query($sql2, $conn );
+              if(! $result )
+              {
+                die('error ');
+              }
+              $data=mysql_fetch_array($result);
+              $rank=$data['rank'];
+
+              $result=mysql_query($sql, $conn );
+              if(! $result )
+              {
+                die('error ');
+              }
+              $data=mysql_fetch_array($result);
+              echo "<tr>";
+              echo "<td><span class='badge badge-info'>$user</span></td>";
+              echo "<td><span class='badge badge-warning'> $data[UserScore] </span></td>";
+              echo "<td><span class='badge badge-success'> $rank </span></td>";
+              echo "<td><span class='label label-important'> $data[LastAnswerTime]</span> </td>";
+              echo "</tr>";
+              ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
   </div>
 </div>
 </div>
-
+</div>
  </div>
 <!--Footer-part-->
 <div class="row-fluid">

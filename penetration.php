@@ -73,8 +73,8 @@ else
   <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu active"> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
-        <li class="active"><a href="basic.php">basic</a></li>
-        <li><a href="penetration.php">penetration</a></li>
+        <li><a href="basic.php">basic</a></li>
+        <li class="active"><a href="penetration.php">penetration</a></li>
         <li><a href="reverse.php">reverse</a></li>
         <li><a href="pwn.php">pwn</a></li>
         <li><a href="mis.php">mis</a></li>
@@ -101,16 +101,16 @@ else
 
 <div class="widget-box">
           <div class="widget-title"> <span class="icon"> <i class="icon-hand-right"></i> </span>
-            <h5>Basic</h5>
+            <h5>Penetration</h5>
           </div>
 
           <div class="widget-content"> 
-            <a href="#BASIC10" id="BtBASIC10" data-toggle="modal" class="btn btn-success">BASIC10</a> 
-            <a href="#BASIC20" id="BtBASIC20" data-toggle="modal" class="btn btn-success">BASIC20</a>
-            <a href="#BASIC30" id="BtBASIC30" data-toggle="modal" class="btn btn-success">BASIC30</a>
-            <a href="#BASIC40" id="BtBASIC40" data-toggle="modal" class="btn btn-success">BASIC40</a>
+            <a href="#PENE10" id="BtPENE10" data-toggle="modal" class="btn btn-success">PENE10</a> 
+            <a href="#PENE20" id="BtPENE20" data-toggle="modal" class="btn btn-success">PENE20</a>
+            <a href="#PENE30" id="BtPENE30" data-toggle="modal" class="btn btn-success">PENE30</a>
+            <a href="#PENE40" id="BtPENE40" data-toggle="modal" class="btn btn-success">PENE40</a>
             
-            <div id="BASIC10" class="modal hide">
+            <div id="PENE10" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -120,16 +120,16 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form  class="form-horizontal" action="" method="post">
-                      <b>key:</b> <input type="text"  name="BASIC10" placeholder="input your key">
+                      <b>key:</b> <input type="text"  name="PENE10" placeholder="input your key">
                       <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                           
                       </form>
 
                 </p>
               </div>
-            </div>
-          
-          <div id="BASIC20" class="modal hide">
+            
+          </div>
+          <div id="PENE20" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -139,25 +139,7 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC20" placeholder="input your key">
-                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
-                      </form>
-
-                </p>
-              </div>
-            </div>
-          
-          <div id="BASIC30" class="modal hide">
-              <div class="modal-header">
-                <button data-dismiss="modal" class="close" type="button">×</button>
-                <h3>Pop up Header</h3>
-              </div>
-              <div class="modal-body">
-                <p>
-
-                      who is the greastest hacker?<br><br><br>
-                      <form  class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC30" placeholder="input your key">
+                      <b>key:</b> <input type="text" name="PENE20" placeholder="input your key">
                            <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                       </form>
 
@@ -165,7 +147,7 @@ else
               </div>
             
           </div>
-          <div id="BASIC40" class="modal hide">
+          <div id="PENE30" class="modal hide">
               <div class="modal-header">
                 <button data-dismiss="modal" class="close" type="button">×</button>
                 <h3>Pop up Header</h3>
@@ -175,7 +157,25 @@ else
 
                       who is the greastest hacker?<br><br><br>
                       <form  class="form-horizontal" action="#" method="post">
-                      <b>key:</b> <input type="text" name="BASIC40" placeholder="input your key">
+                      <b>key:</b> <input type="text" name="PENE30" placeholder="input your key">
+                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
+                      </form>
+
+                </p>
+              </div>
+            
+          </div>
+          <div id="PENE40" class="modal hide">
+              <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h3>Pop up Header</h3>
+              </div>
+              <div class="modal-body">
+                <p>
+
+                      who is the greastest hacker?<br><br><br>
+                      <form  class="form-horizontal" action="#" method="post">
+                      <b>key:</b> <input type="text" name="PENE40" placeholder="input your key">
                           <input class="btn btn-primary" type="submit" name='submit' value="submit"  />
                       </form>
 

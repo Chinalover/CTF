@@ -1,7 +1,14 @@
+<?php
+if(isset($_COOKIE['user']))
+  echo "<script>alert('you have login');location='index.php';</script>"; 
+else
+{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Matrix Admin</title>
+<title>CTF-2015</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -28,12 +35,12 @@
         <li class="divider"></li>
         <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
         <li class="divider"></li>
-        <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+        <li><a href="login.php"><i class="icon-key"></i> Log Out</a></li>
       </ul>
     </li>
  
     
-    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+    <li class=""><a title="" href="login.php"><i class="icon icon-user"></i> <span class="text">sign in</span></a></li>
   </ul>
 </div>
 
@@ -42,18 +49,19 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
   <ul>
-  <li class="active"><a href="index.html"> <span>CTF-2015</span></a> </li>
-  <li><a href="index.html"> <span>RULES</span></a> </li>
+  <li class="active"><a href="index.php"> <span>CTF-2015</span></a> </li>
+  <li><a href="rules.php"> <span>RULES</span></a> </li>
   <li class="submenu "> <a href="#"> <span>CHALLENGE</span></a>
   <ul>
-        <li><a href="index2.html">penetration</a></li>
-        <li><a href="gallery.html">reverse</a></li>
-        <li><a href="calendar.html">pwn</a></li>
-        <li><a href="invoice.html">mis</a></li>
+        <li><a href="basic.php">basic</a></li>
+        <li><a href="penetration.php">penetration</a></li>
+        <li><a href="reverse.php">reverse</a></li>
+        <li><a href="pwn.php">pwn</a></li>
+        <li><a href="mis.php">mis</a></li>
       </ul>
-  <li><a href="index.html"> <span>RANK</span></a> </li>
-  <li><a href="index.html"> <span>NOTICE</span></a> </li>
-  <li><a href="index.html"> <span>STUDY-GUIDE</span></a> </li>
+  <li><a href="rank.php"> <span>RANK</span></a> </li>
+  <li><a href="notice.php"> <span>NOTICE</span></a> </li>
+  <li><a href="study-guide.php"> <span>STUDY-GUIDE</span></a> </li>
 </li>
 
   </ul>
@@ -67,7 +75,7 @@
 	<a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> HOME</a> 
 	<a href="#" class="current">REGISTER WIZARD</a> </div>
     
-	<h1>Welcome to register fzu-ctf-2015</h1>
+	<h1>WELCOME TO REGISTER CTF-2015</h1>
   </div>
   <div class="container-fluid"><hr>
     <div class="row-fluid">
@@ -77,7 +85,7 @@
             <h5>register wizard &amp; validation</h5>
           </div>
           <div class="widget-content nopadding">
-            <form id="form-wizard" class="form-horizontal" method="post">
+            <form id="form-wizard" class="form-horizontal" method="post" action="#">
               <div id="form-wizard-1" class="step">
                 <div class="control-group">
                   <label class="control-label">Username</label>
@@ -114,7 +122,7 @@
               </div>
               <div class="form-actions">
                 <input id="back" class="btn btn-primary" type="reset" value="Back" />
-                <input id="next" class="btn btn-primary" type="submit" value="Next" />
+                <input id="next" class="btn btn-primary" type="submit" value="Next" name="submit" />
                 <div id="status"></div>
               </div>
               <div id="submitted"></div>
@@ -139,3 +147,22 @@
 <script src="js/matrix.wizard.js"></script>
 </body>
 </html>
+<? } ?>
+<?php
+if(isset($_POST['username']))
+{
+  
+  require_once 'dbconn.php';
+  $user=$_POST['username'];
+  $pass=md5($_POST['password']);
+  $email=$_POST['email'];
+  $RegisterSql="insert into ctf_user values('$user','$email','$pass',0,null);";
+  $result=mysql_query($RegisterSql, $conn );
+  if(! $result )
+  {
+    die('error ');
+  }
+  else
+    echo "<script type='text/javascript'>alert('register success!');</script>";
+}
+?>
