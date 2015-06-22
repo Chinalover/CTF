@@ -21,13 +21,29 @@
 
 <!--top-Header-menu-->
     <?php 
-    if(isset($_COOKIE['user']))
+    if(isset($_COOKIE['cookies']))
     {
+      $securityCookie=$_COOKIE['cookies'];
+      $filename="/tmp/ctf/".$securityCookie;
+      $fp=fopen($filename,'r');
+      $rand_read=fgets($fp);
+      fclose($fp);
+      $salt=987658123411873419465135623;
+      $decryptCookie=base64_decode($securityCookie)^(md5($salt).$rand_read);
+      if(!(list($user,$ip,$expire)=split("#",$decryptCookie)))
+      {
+        die('error');
+      }
+      if($user)
+      {
+
+
+
     ?>
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
     <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  
-    <span class="text"><? echo $_COOKIE['user']; ?>
+    <span class="text"><? echo $user; ?>
     </span>
     <b class="caret"></b></a>
       <ul class="dropdown-menu">
@@ -42,6 +58,7 @@
   </ul>
 </div>
 <?
+}
 }
 else
 {
@@ -108,7 +125,6 @@ else
               <tbody>
               <?
               require_once 'dbconn.php';
-              $user=$_COOKIE['user'];
               $sql="select * from ctf_user where user='$user' ;";
               $sql2="select  count( distinct a1.UserScore)+1 rank from ctf_user a1,ctf_user a2 where a2.UserScore in (select UserScore from ctf_user where user='$user') and (a1.UserScore>a2.UserScore or (a1.UserScore=a2.UserScore and a1.LastAnswerTime<a2.LastAnswerTime)) and a1.user<>'$user'";
               $result=mysql_query($sql2, $conn );

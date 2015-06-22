@@ -1,8 +1,20 @@
 <?
-if(isset($_COOKIE['user']))
+if(isset($_COOKIE['cookies']))
 {
   require_once 'dbconn.php';
-  $user=$_COOKIE['user'];
+  $securityCookie=$_COOKIE['cookies'];
+  $filename="/tmp/ctf/".$securityCookie;
+  $fp=fopen($filename,'r');
+  $rand_read=fgets($fp);
+  fclose($fp);
+  $salt=987658123411873419465135623;
+  $decryptCookie=base64_decode($securityCookie)^(md5($salt).$rand_read);
+  if(!(list($user,$ip,$expire)=split("#",$decryptCookie)))
+  {
+    die('error');
+  }
+  if($user)
+  {
 
   /*
 设置已经答题的标记
@@ -72,6 +84,8 @@ if(isset($_COOKIE['user']))
         echo "<script type='text/javascript'>alert('not correct!');</script>"; 
     }
 
+  }
+    
   }
 
 }

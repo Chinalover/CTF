@@ -15,9 +15,29 @@ if(! $result )
 }
 
 $data=mysql_fetch_array($result);
+
+//
+/*security cookies develop~
+(username+ip+expiration+salt) hash...
+
+*/
+
+$salt=987658123411873419465135623;
+$rand=uniqid(rand());
+$user=$data['user'];
+$expire=time();
+$ip=addslashes($_SERVER["REMOTE_ADDR"]);
+$cookies=$user.'#'.$ip.'#'.$expire;
+$securityCookie=base64_encode($cookies^(md5($salt).$rand));
+$filename="/tmp/ctf/".$securityCookie;
+
+
 if($data)
 {	
-	setcookie("user",$data['user'],time()+3600);
+	$fp=fopen($filename,'w');
+	fwrite($fp,$rand);
+	fclose($fp);
+	setcookie("cookies",$securityCookie,time()+3600,NULL, NULL, NULL, TRUE);
     echo"<script type='text/javascript'>alert('登陆成功');location='index.php';</script>"; 
 
 }

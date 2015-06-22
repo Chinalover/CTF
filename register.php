@@ -1,5 +1,5 @@
 <?php
-if(isset($_COOKIE['user']))
+if(isset($_COOKIE['cookies']))
   echo "<script>alert('you have login');location='index.php';</script>"; 
 else
 {
